@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E🇪🇸%3C/text%3E%3C/svg%3E">
+<title>Glosario — ECO A1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Noto+Sans+KR:wght@400;500;700;900&family=Gaegu:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../common/style.css?v=mw9c6jjc">
+<link rel="stylesheet" href="../common/eco.css?v=mw9c6jjc">
+</head>
+<body>
+<header class="hub-top"><a class="ht" href="../">ECO A1</a><a class="home" href="../" id="homeL"></a>
+  <button id="sndBtn" class="sndbtn">🔊</button><span id="langslot"></span></header>
+<div class="hub-wrap">
+  <div class="hub-hero" style="background:linear-gradient(120deg,#8a4b1f,#c2410c 50%,#f6a04d)"><span class="st">📚</span><h1 id="gt">Glosario</h1><p id="gs"></p></div>
+  <div class="gl-bar"><input id="q" class="inp" autocomplete="off"><span id="units"></span><span id="cnt" class="small"></span></div>
+  <div id="list" class="gl-list"></div>
+</div>
+<footer class="foot" id="foot"></footer>
+<script src="../common/i18n.js?v=mw9c6jjc"></script>
+<script src="../units/meta.js?v=mw9c6jjc"></script>
+<script>
+(function () {
+  const I = I18N, t = I.t, M = window.ECO_META || [];
+  const esc = s => String(s).replace(/[&<>"]/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[m]));
+  const strip = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+  const W = []; M.forEach(u => u.vocab.forEach(v => W.push({ u: u.num, es: v[0], ko: v[1], en: v[2], e: v[3] })));
+  W.sort((a, b) => strip(a.es.replace(/^(el|la|los|las|un|una) /i, '')).localeCompare(strip(b.es.replace(/^(el|la|los|las|un|una) /i, ''))));
+  let unit = 0;
+  document.getElementById('langslot').appendChild(I.switcher());
+  document.getElementById('sndBtn').onclick = () => TTS.panel();
+  const q = document.getElementById('q');
+  function list() {
+    const s = strip(q.value.trim());
+    const r = W.filter(w => (!unit || w.u === unit) && (!s || strip(w.es + ' ' + w.ko + ' ' + w.en).includes(s)));
+    document.getElementById('cnt').textContent = r.length + ' / ' + W.length;
+    document.getElementById('list').innerHTML = r.map(w => `<button class="gl-it" data-say="${esc(w.es)}"><span style="font-size:22px">${esc(w.e || '🔹')}</span><span><b>${esc(w.es)}</b><small>${esc(I.lang === 'ko' ? (w.ko || w.en) : (w.en || w.ko))}</small></span><span class="u">U${w.u}</span></button>`).join('');
+  }
+  function draw() {
+    document.getElementById('homeL').textContent = '🏠 ' + t('home');
+    document.getElementById('gt').textContent = t('gloss') + ' · Glosario';
+    document.getElementById('gs').textContent = t('glossSub');
+    document.getElementById('foot').textContent = t('footer');
+    q.placeholder = '🔍 ' + t('search');
+    document.getElementById('units').innerHTML = [0, ...M.map(u => u.num)].map(n => `<button class="gl-unit ${n === unit ? 'on' : ''}" data-u="${n}">${n ? 'U' + n : t('all')}</button>`).join(' ');
+    document.querySelectorAll('.gl-unit').forEach(b => b.onclick = () => { unit = +b.dataset.u; draw(); });
+    list();
+  }
+  q.oninput = list;
+  document.addEventListener('click', e => { const b = e.target.closest('[data-say]'); if (b) TTS.say(b.dataset.say, b); });
+  draw(); document.addEventListener('langchange', draw);
+})();
+</script>
+</body>
+</html>

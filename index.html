@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E🇪🇸%3C/text%3E%3C/svg%3E">
+<title>ECO A1 · Español — 인터랙티브 학습 (Unidad 1–8)</title>
+<meta name="description" content="ECO A1 (Edelsa) Libro del Alumno — 8개 단원 인터랙티브 스페인어 학습 사이트 · Interactive Spanish study site for all 8 units">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Noto+Sans+KR:wght@400;500;700;900&family=Gaegu:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common/style.css?v=mw9c6jjc">
+<link rel="stylesheet" href="common/eco.css?v=mw9c6jjc">
+<style>
+.hub-hero{background:linear-gradient(120deg,#0f6fa3,#1b8fc9 45%,#58c0e8)}
+.hub-hero h1 small{display:block;font-family:var(--sans);font-size:15px;font-weight:500;opacity:.85;margin-top:2px}
+.eco-logo{font-family:var(--sans);font-weight:900;letter-spacing:.04em}
+.eco-logo i{font-style:normal;opacity:.6}
+.lcard .lh{color:#fff}
+</style>
+</head>
+<body>
+<header class="hub-top"><a class="ht" href="./"><span class="eco-logo"><i>(((</i> ECO <i>)))</i></span> A1</a>
+  <button id="sndBtn" class="sndbtn">🔊<span id="sndLbl"></span></button><span id="langslot"></span></header>
+<div class="hub-wrap">
+  <div class="hub-hero">
+    <span class="st">🇪🇸</span>
+    <h1>ECO A1 · Español<small>Curso Modular de Español Lengua Extranjera · Libro del Alumno (Edelsa)</small></h1>
+    <p id="heroSub"></p>
+    <div class="hub-name"><label for="nm" id="nmLbl"></label><input id="nm" class="inp"><span id="tot" class="small" style="color:#e8f6ff"></span></div>
+    <div class="hub-tools"><a href="glosario/" id="glLink"></a></div>
+  </div>
+  <div class="card" style="margin-top:20px">
+    <h3 id="howT"></h3>
+    <div class="legend" id="legend"></div>
+    <p class="small" id="howP"></p>
+  </div>
+  <div id="grid" class="hub-grid"></div>
+</div>
+<footer class="foot" id="foot"></footer>
+<script src="common/i18n.js?v=mw9c6jjc"></script>
+<script src="units/meta.js?v=mw9c6jjc"></script>
+<script>
+(function () {
+  const I = I18N, t = I.t, M = window.ECO_META || [];
+  const BG = ['linear-gradient(135deg,#ffb36b,#f26a21)', 'linear-gradient(135deg,#f6a8c2,#d23a5b)', 'linear-gradient(135deg,#8fd3f4,#1b8fc9)', 'linear-gradient(135deg,#a6e3a1,#4a9b2e)',
+    'linear-gradient(135deg,#ffd27a,#e0a800)', 'linear-gradient(135deg,#d6b4f0,#8e3fa0)', 'linear-gradient(135deg,#9fe2d6,#13998a)', 'linear-gradient(135deg,#c7d36a,#7a8f12)'];
+  document.getElementById('langslot').appendChild(I.switcher());
+  document.getElementById('sndBtn').onclick = () => TTS.panel();
+  const esc = s => String(s).replace(/[&<>"]/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[m]));
+  const nm = document.getElementById('nm');
+  nm.value = I.store.get('name', ''); nm.oninput = () => I.store.set('name', nm.value);
+  function draw() {
+    document.getElementById('sndLbl').textContent = ' ' + t('voice');
+    document.getElementById('heroSub').textContent = t('heroSub');
+    document.getElementById('nmLbl').textContent = '👩‍🎓 ' + t('nameLbl');
+    nm.placeholder = t('namePh');
+    document.getElementById('glLink').textContent = '📚 ' + t('gloss');
+    document.getElementById('howT').textContent = '✍️ ' + t('howTo');
+    document.getElementById('legend').innerHTML = `<div>${t('tipStudy')}</div><div>🎯 <b>¡Compruébalo!</b> — ${t('examSub')}</div><div>📊 <b>Resultados</b> — ${t('resultsSub')}</div>
+      <div><span class="mk ok">○</span> ${t('lgOk')} · <span class="mk half">△</span> ${t('lgHalf')} · <span class="mk no">✕</span> ${t('lgNo')}</div><div>🔊 ${t('vTip')}</div>`;
+    document.getElementById('howP').textContent = t('nameNote');
+    document.getElementById('foot').textContent = t('footer');
+    const sum = I.store.get('sum', {}); let dn = 0;
+    document.getElementById('grid').innerHTML = M.map((u, i) => {
+      const s = sum['u' + u.num]; const pct = s && s.n ? Math.round(s.d / s.n * 100) : 0; if (s) dn += s.d;
+      return `<a class="lcard" href="U${u.num}/"><div class="lh" style="background:${BG[i]}">${esc(u.emoji)}<div class="badge"><small>Unidad</small>${u.num}</div></div>
+        <div class="lbody"><h2>${esc(u.title)}</h2><div class="lsub">p. ${esc(u.pages)} · ${u.ex} ejercicios · ${u.items} ${t('qs')}</div><p>${esc(I.c(u.topics))}</p>
+        <div class="lp"><div class="bar" style="flex:1"><i style="width:${pct}%"></i></div><b>${pct}%</b>${s && s.e != null ? `<span title="¡Compruébalo!">🎯${s.e}</span>` : ''}</div></div></a>`;
+    }).join('');
+    document.getElementById('tot').textContent = dn ? `· ${dn} ${t('totalDone')}` : '';
+    document.title = 'ECO A1 · Español — ' + t('heroSub').split(/[—.。]/)[0];
+  }
+  draw(); document.addEventListener('langchange', draw);
+})();
+</script>
+</body>
+</html>

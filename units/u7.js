@@ -1,0 +1,537 @@
+ECO.unit({
+  num: 7,
+  title: '¡Qué mala suerte!',
+  emoji: '🤕🍀',
+  pages: '66–75',
+  topics: { ko: '과거 이야기 · 전기(인생) · 병원 진료 · 신체 부위', en: 'Past events · biographies · at the doctor · body parts' },
+  goals: [
+    { es: 'Hablar de actividades del pasado', ko: '과거의 활동에 대해 말하기', en: 'Talk about past activities' },
+    { es: 'Contar la vida de alguien', ko: '누군가의 인생 이야기하기', en: 'Tell someone’s life story' },
+    { es: 'Manejarse en la consulta de un médico', ko: '병원 진료실에서 대처하기', en: 'Get by at the doctor’s office' },
+    { es: 'Números, momentos de la vida y partes del cuerpo', ko: '숫자, 인생의 순간들, 신체 부위', en: 'Numbers, life events and body parts' },
+    { es: 'El Pretérito Indefinido', ko: '단순과거(부정과거) 시제', en: 'The preterite (Pretérito Indefinido)' },
+    { es: 'El verbo DOLER. Frases exclamativas', ko: 'DOLER 동사와 감탄문', en: 'The verb DOLER. Exclamations' },
+    { es: 'Narrar la vida y hablar con el médico', ko: '인생 이야기하기와 의사와 대화하기', en: 'Narrate a life and talk to the doctor' },
+    { es: 'Premios Nobel de Literatura en español', ko: '스페인어권 노벨 문학상 수상자', en: 'Nobel Prizes in Literature in Spanish' }
+  ],
+  people: { 'Presentador': 'm', 'Humorista': 'm', 'Médica': 'f', 'Paciente': 'm' },
+  sections: [
+    /* ───────────── PORTADA ───────────── */
+    { id: 'portada', tag: '', name: 'Portada',
+      sub: { es: '«La Noche de Reinaldo»', ko: '「레이날도의 밤」 쇼', en: '“Reinaldo’s Night” show' },
+      blocks: [
+        { type: 'note', es: 'Reinaldo es humorista. En la tele cuenta su vida: ¡todos los días le pasa algo malo!',
+          ko: '레이날도는 코미디언이에요. TV에서 자기 인생 이야기를 해요. 매일 나쁜 일이 생긴대요!',
+          en: 'Reinaldo is a comedian. On TV he tells his life story: something bad happens to him every day!' },
+        { type: 'vocab', title: { es: 'Las escenas (A–H)', ko: '그림 장면 (A–H)', en: 'The scenes (A–H)' },
+          items: [
+            { es: 'A. Fui a esquiar y...', ko: '스키 타러 갔다가...', en: 'I went skiing and...', e: '⛷️' },
+            { es: 'B. Me atropelló un coche.', ko: '차에 치였어요.', en: 'A car ran me over.', e: '🚗💥' },
+            { es: 'C. Tuve un accidente con un camión.', ko: '트럭과 사고가 났어요.', en: 'I had an accident with a truck.', e: '🚚' },
+            { es: 'D. Me compré un coche para ir de un sitio a otro.', ko: '이곳저곳 다니려고 차를 샀어요.', en: 'I bought a car to get around.', e: '🚙' },
+            { es: 'E. A los nueve años me compraron unos patines y con ellos me rompí un brazo.', ko: '아홉 살 때 롤러스케이트를 사 줬는데 그걸로 팔이 부러졌어요.', en: 'At nine they bought me skates and I broke an arm with them.', e: '🛼' },
+            { es: 'F. Me caí al suelo.', ko: '바닥에 넘어졌어요.', en: 'I fell on the floor.', e: '🍌' },
+            { es: 'G. Más tarde mi abuelo me regaló una bicicleta, y con ella me rompí una pierna.', ko: '나중에 할아버지가 자전거를 선물해 줬는데 그걸로 다리가 부러졌어요.', en: 'Later my grandfather gave me a bike and I broke a leg with it.', e: '🚲' },
+            { es: 'H. Al cumplir los 16 años me compré una moto. Tuve mi primer accidente grave.', ko: '16살이 되자 오토바이를 샀어요. 첫 큰 사고가 났어요.', en: 'When I turned 16 I bought a motorbike. I had my first serious accident.', e: '🏍️' }
+          ] },
+        { type: 'dialog', title: { es: 'La Noche de Reinaldo', ko: '레이날도의 밤', en: 'Reinaldo’s Night' },
+          lines: [
+            { who: 'Presentador', es: 'Señoras, señores. Aquí empieza ¡“La Noche de Reinaldo”!', ko: '신사 숙녀 여러분, 「레이날도의 밤」을 시작합니다!', en: 'Ladies and gentlemen, here begins “Reinaldo’s Night”!' },
+            { who: 'Humorista', es: 'Buenas noches. Muchas gracias. Muchas gracias. ¡Qué mala suerte! ¡Qué mala suerte! ¡Qué mala suerte! No, no, por favor, sin risas. Yo no soy normal. Todos los días me pasa algo. Algo malo, claro.', ko: '안녕하세요. 감사합니다. 정말 운이 나빠요! 아니, 아니, 제발 웃지 마세요. 저는 평범하지 않아요. 매일 무슨 일이 생겨요. 물론 나쁜 일이요.', en: 'Good evening. Thank you. What bad luck! No, no, please, no laughing. I’m not normal. Something happens to me every day. Something bad, of course.' },
+            { who: 'Humorista', es: 'Por ejemplo, yo nací el 20 de julio de 1969. ¿Qué pasó ese día? El hombre pisó la Luna por primera vez. ¿Y yo? Yo me caí de la cuna. También fue la primera vez, ¡pero el primer día de mi vida!', ko: '예를 들어 저는 1969년 7월 20일에 태어났어요. 그날 무슨 일이 있었죠? 인류가 처음으로 달에 발을 디뎠어요. 그럼 저는요? 요람에서 떨어졌어요. 그것도 처음이었죠, 인생 첫날에요!', en: 'For example, I was born on 20 July 1969. What happened that day? Man walked on the Moon for the first time. And me? I fell out of my cradle. It was also the first time — but on the first day of my life!' },
+            { who: 'Humorista', es: 'De pequeño fui feliz, pero viví con mi mala suerte. A los nueve años me compraron unos patines y con ellos me rompí un brazo. Más tarde mi abuelo me regaló una bicicleta, y con ella me rompí una pierna. ¿Soy un hombre normal?', ko: '어릴 때 행복했지만 불운과 함께 살았어요. 아홉 살 때 롤러스케이트를 사 줬는데 팔이 부러졌어요. 나중에 할아버지가 자전거를 선물해 줬는데 다리가 부러졌어요. 제가 평범한 사람인가요?', en: 'As a child I was happy, but I lived with my bad luck. At nine they bought me skates and I broke an arm. Later my grandfather gave me a bike and I broke a leg. Am I a normal man?' },
+            { who: 'Humorista', es: 'Al cumplir los 16 años me compré una moto. Tuve mi primer accidente grave: choqué contra un árbol y estuve en el hospital dos meses. Todavía me duele la cabeza. Pero me curé y entonces estudié Medicina. Así me ahorro dinero en médicos, ¿saben?', ko: '16살이 되자 오토바이를 샀어요. 첫 큰 사고가 났죠. 나무에 부딪혀서 두 달 동안 입원했어요. 아직도 머리가 아파요. 하지만 나았고 그때 의대에 갔어요. 그러면 병원비가 절약되잖아요?', en: 'When I turned 16 I bought a motorbike. I had my first serious accident: I crashed into a tree and was in hospital for two months. My head still hurts. But I got better and then I studied Medicine. That way I save money on doctors, you know?' },
+            { who: 'Humorista', es: 'Me licencié en 1991 y, al año siguiente, me saqué el carné de conducir. Primero trabajé como médico en un pueblo y me compré un coche para ir de un sitio a otro. El coche me duró dos semanas: siniestro total.', ko: '1991년에 졸업했고 다음 해에 운전면허를 땄어요. 처음엔 한 마을에서 의사로 일했고 이동하려고 차를 샀어요. 차는 2주 만에 폐차됐어요.', en: 'I graduated in 1991 and the following year I got my driving licence. First I worked as a doctor in a village and bought a car to get around. The car lasted two weeks: a total write-off.' },
+            { who: 'Humorista', es: 'Después trabajé en un hospital y allí conocí a una guapa enfermera. Nos casamos en 1997 y tuve dos hijos. Ahora conduce mi mujer, claro. Un día me quitó las llaves del coche y dijo: “Tú no eres un hombre normal”. Desde entonces me siento detrás con los niños.', ko: '그 후 병원에서 일했고 거기서 예쁜 간호사를 만났어요. 1997년에 결혼해서 아이가 둘 있어요. 이제 운전은 물론 아내가 해요. 어느 날 아내가 차 열쇠를 빼앗으며 "당신은 평범한 사람이 아니야"라고 했죠. 그 후로 저는 아이들과 뒷자리에 앉아요.', en: 'Then I worked in a hospital and met a pretty nurse there. We got married in 1997 and I had two children. Now my wife drives, of course. One day she took my car keys and said: “You’re not a normal man.” Since then I sit in the back with the kids.' }
+          ] },
+        { type: 'choice', id: 'p1', n: '1', listen: true,
+          title: { es: 'Escucha y señala los dibujos relacionados con la vida de esta persona.', ko: '듣고 이 사람의 인생과 관련된 그림을 고르세요.', en: 'Listen and mark the pictures related to this person’s life.' },
+          items: [
+            { q: 'A ⛷️ Fui a esquiar y...', opts: ['Sí, es de su vida', 'No'], a: 1 },
+            { q: 'B 🚗💥 Me atropelló un coche.', opts: ['Sí, es de su vida', 'No'], a: 1 },
+            { q: 'C 🚚 Tuve un accidente con un camión.', opts: ['Sí, es de su vida', 'No'], a: 1 },
+            { q: 'D 🚙 Me compré un coche para ir de un sitio a otro.', opts: ['Sí, es de su vida', 'No'], a: 0 },
+            { q: 'E 🛼 Me compraron unos patines y me rompí un brazo.', opts: ['Sí, es de su vida', 'No'], a: 0 },
+            { q: 'F 🍌 Me caí al suelo.', opts: ['Sí, es de su vida', 'No'], a: 1 },
+            { q: 'G 🚲 Mi abuelo me regaló una bicicleta y me rompí una pierna.', opts: ['Sí, es de su vida', 'No'], a: 0 },
+            { q: 'H 🏍️ Me compré una moto. Tuve mi primer accidente grave.', opts: ['Sí, es de su vida', 'No'], a: 0 }
+          ] }
+      ] },
+
+    /* ───────────── A ───────────── */
+    { id: 'a', tag: 'A', name: 'Comprensión y práctica',
+      sub: { es: 'La biografía', ko: '전기(인생 이야기)', en: 'The biography' },
+      blocks: [
+        { type: 'choice', id: 'a1', n: '1', listen: true,
+          title: { es: '¿Qué oyes?', ko: '무엇이 들리나요?', en: 'What do you hear?' },
+          items: [
+            { say: 'Por favor, sin risas.', opts: ['Por favor, sin risas.', 'Por favor, sonrisas.'], a: 0 },
+            { say: 'Nací el 20 de julio.', opts: ['Nació el 20 de julio.', 'Nací el 20 de julio.'], a: 1 },
+            { say: 'También fue la primera vez.', opts: ['También fue la primera vez.', 'También fui la primera vez.'], a: 0 },
+            { say: 'Me compré una moto.', opts: ['Me compré una moto.', 'Me compró una moto.'], a: 0 },
+            { say: 'Me duele la cabeza.', opts: ['Le duele la cabeza.', 'Me duele la cabeza.'], a: 1 }
+          ] },
+        { type: 'match', id: 'a2', n: '2',
+          title: { es: 'Relaciona las frases con los dibujos.', ko: '문장과 그림을 연결하세요.', en: 'Match the sentences with the pictures.' },
+          left: ['1. Me saqué el carné de conducir.', '2. El hombre pisó la Luna.', '3. Me caí de la cuna.', '4. Conduce mi mujer y yo me siento detrás.', '5. Me rompí un brazo y una pierna.', '6. Siniestro total.'],
+          right: ['A 🚗💥 coche destrozado', 'B 🙌🚘 chico feliz con la «L» en el coche', 'C 🩹 chico con el brazo en cabestrillo y muletas', 'D 👨‍🚀🌕 astronauta en la Luna', 'E 🚙 mujer conduce, hombre detrás', 'F 👶😭 bebé que se cae'],
+          a: [1, 3, 5, 4, 2, 0] },
+        { type: 'choice', id: 'a3', n: '3', listen: true,
+          title: { es: 'Marca los años en el orden en que los escuches.', ko: '들리는 순서대로 연도를 표시하세요.', en: 'Mark the years in the order you hear them.' },
+          items: [
+            { say: 'Yo nací el 20 de julio de mil novecientos sesenta y nueve.', q: '¿Qué año oyes?', opts: ['1969: mil novecientos sesenta y nueve', '1991: mil novecientos noventa y uno', '1997: mil novecientos noventa y siete'], a: 0 },
+            { say: 'Me licencié en mil novecientos noventa y uno.', q: '¿Qué año oyes?', opts: ['1969: mil novecientos sesenta y nueve', '1991: mil novecientos noventa y uno', '1997: mil novecientos noventa y siete'], a: 1 },
+            { say: 'Nos casamos en mil novecientos noventa y siete.', q: '¿Qué año oyes?', opts: ['1969: mil novecientos sesenta y nueve', '1991: mil novecientos noventa y uno', '1997: mil novecientos noventa y siete'], a: 2 }
+          ] },
+        { type: 'match', id: 'a4', n: '4',
+          title: { es: 'Relaciona las columnas. Después escribe la biografía de Reinaldo.', ko: '두 열을 연결한 뒤 레이날도의 전기를 쓰세요.', en: 'Match the columns. Then write Reinaldo’s biography.' },
+          left: ['a. En 1969', 'b. En 1991', 'c. A los 16 años', 'd. Primero', 'e. En el año 1997', 'f. Después del pueblo'],
+          right: ['1. me licencié.', '2. tuve un accidente grave.', '3. trabajé en un hospital.', '4. trabajé de médico en un pueblo.', '5. me casé.', '6. nací.'],
+          a: [5, 0, 1, 3, 4, 2] },
+        { type: 'open', id: 'a4b', n: '4',
+          title: { es: 'Biografía de Reinaldo.', ko: '레이날도의 전기를 쓰세요.', en: 'Reinaldo’s biography.' },
+          items: [ { q: 'Biografía de Reinaldo (en 3.ª persona):', model: 'Reinaldo nació en 1969. A los 16 años tuvo un accidente grave. Estudió Medicina y se licenció en 1991. Primero trabajó de médico en un pueblo. Después del pueblo trabajó en un hospital. En el año 1997 se casó.' } ] },
+        { type: 'open', id: 'a5', n: '5',
+          title: { es: 'Cuenta tu vida en pocas palabras.', ko: '당신의 인생을 짧게 이야기하세요.', en: 'Tell your life story in a few words.' },
+          items: [ { q: 'nací – de pequeño viví – estudié – trabajé – me casé...', model: 'Nací en Seúl en 2010. De pequeño viví en Busan. Estudié en un colegio internacional. En 2024 empecé a estudiar español.' } ] }
+      ] },
+
+    /* ───────────── B ───────────── */
+    { id: 'b', tag: 'B', name: 'Pronunciación y ortografía',
+      sub: { es: 'La sílaba tónica y la tilde', ko: '강세 음절과 강세 부호(틸데)', en: 'The stressed syllable and the written accent' },
+      blocks: [
+        { type: 'note', es: '<b>1.</b> Normalmente, las palabras terminadas en consonante (excepto N y S) llevan el acento tónico en la última sílaba: <i>hos-pi-<b>tal</b>, mu-<b>jer</b>, fe-<b>liz</b></i>.<br>Y, de no ser así, llevan un acento escrito (o tilde) en la sílaba donde está el acento tónico: <i><b>ár</b>-bol, ca-<b>rác</b>-ter, <b>lá</b>-piz</i>.',
+          ko: '자음(N, S 제외)으로 끝나는 단어는 보통 마지막 음절에 강세가 있어요. 그렇지 않으면 강세 음절에 틸데(´)를 써요.',
+          en: 'Words ending in a consonant (except N and S) are normally stressed on the last syllable. If not, they carry a written accent on the stressed syllable.' },
+        { type: 'note', es: '<b>2.</b> Normalmente, las palabras terminadas en vocal, N y S llevan el acento tónico en la penúltima sílaba: <i>e-<b>jem</b>-plo, com-<b>pra</b>-ron, <b>no</b>-ches</i>.<br>Y, de no ser así, llevan tilde en la sílaba donde está el acento tónico: <i>re-ga-<b>ló</b>, sa-<b>lón</b>, de-<b>trás</b></i>.',
+          ko: '모음, N, S로 끝나는 단어는 보통 끝에서 두 번째 음절에 강세가 있어요. 그렇지 않으면 강세 음절에 틸데를 써요.',
+          en: 'Words ending in a vowel, N or S are normally stressed on the second-to-last syllable. If not, they carry a written accent.' },
+        { type: 'note', es: '<b>3.</b> Todas las palabras que llevan el acento tónico en la antepenúltima sílaba llevan tilde en esa sílaba: <i><b>mé</b>-di-co, <b>mú</b>-si-ca, A-<b>mé</b>-ri-ca</i>.',
+          ko: '끝에서 세 번째 음절에 강세가 있는 단어는 항상 그 음절에 틸데를 써요.',
+          en: 'All words stressed on the third-to-last syllable always carry a written accent there.' },
+        { type: 'dictation', id: 'b1', n: '1', listen: true,
+          title: { es: 'Escucha y repite.', ko: '듣고 따라 하세요 (그리고 써 보세요).', en: 'Listen and repeat (and write).' },
+          items: [ { say: 'Hospital' }, { say: 'Mujer' }, { say: 'Feliz' }, { say: 'Regaló' }, { say: 'Salón' }, { say: 'Detrás' }, { say: 'Ejemplo' }, { say: 'Compraron' }, { say: 'Noches' }, { say: 'Árbol' }, { say: 'Carácter' }, { say: 'Lápiz' }, { say: 'Médico' }, { say: 'Música' }, { say: 'América' } ] },
+        { type: 'classify', id: 'b2a', n: '2a',
+          title: { es: 'Subraya la sílaba tónica y clasifica las palabras en este cuadro.', ko: '강세 음절을 찾고 표에 단어를 분류하세요. (●=강세 음절)', en: 'Find the stressed syllable and classify the words. (● = stressed syllable)' },
+          cats: ['•● (2 sílabas, última)', '●• (2 sílabas, penúltima)', '••● (3 sílabas, última)', '•●• (3 sílabas, penúltima)', '●•• (3 sílabas, antepenúltima)', '••●• (4 sílabas, penúltima)', '•●•• (4 sílabas, antepenúltima)'],
+          items: [
+            { w: 'Suerte', c: 1 }, { w: 'Aquí', c: 0 }, { w: 'Persona', c: 3 }, { w: 'Compraron', c: 3 },
+            { w: 'Regaló', c: 2 }, { w: 'Sábado', c: 4 }, { w: 'Plátano', c: 4 }, { w: 'Medicina', c: 5 },
+            { w: 'Hospital', c: 2 }, { w: 'Detrás', c: 0 }, { w: 'Niños', c: 1 }, { w: 'Teléfono', c: 6 }
+          ] },
+        { type: 'choice', id: 'b2b', n: '2b', listen: true,
+          title: { es: 'Escucha y comprueba.', ko: '듣고 확인하세요. 강세 음절은 어디인가요?', en: 'Listen and check. Which syllable is stressed?' },
+          items: [
+            { say: 'Suerte', opts: ['SUER-te', 'suer-TE'], a: 0 },
+            { say: 'Aquí', opts: ['A-quí', 'a-QUÍ'], a: 1 },
+            { say: 'Persona', opts: ['PER-so-na', 'per-SO-na', 'per-so-NA'], a: 1 },
+            { say: 'Compraron', opts: ['COM-pra-ron', 'com-PRA-ron', 'com-pra-RON'], a: 1 },
+            { say: 'Regaló', opts: ['re-GA-ló', 're-ga-LÓ', 'RE-ga-lo'], a: 1 },
+            { say: 'Sábado', opts: ['SÁ-ba-do', 'sa-BA-do', 'sa-ba-DO'], a: 0 },
+            { say: 'Plátano', opts: ['PLÁ-ta-no', 'pla-TA-no', 'pla-ta-NO'], a: 0 },
+            { say: 'Medicina', opts: ['ME-di-ci-na', 'me-di-CI-na', 'me-DI-ci-na'], a: 1 },
+            { say: 'Hospital', opts: ['HOS-pi-tal', 'hos-PI-tal', 'hos-pi-TAL'], a: 2 },
+            { say: 'Detrás', opts: ['DE-tras', 'de-TRÁS'], a: 1 },
+            { say: 'Niños', opts: ['NI-ños', 'ni-ÑOS'], a: 0 },
+            { say: 'Teléfono', opts: ['te-LÉ-fo-no', 'te-le-FO-no', 'TE-le-fo-no'], a: 0 }
+          ] },
+        { type: 'choice', id: 'b3', n: '3', listen: true,
+          title: { es: 'Escucha y pon la tilde si es necesario.', ko: '듣고 필요하면 틸데를 붙이세요.', en: 'Listen and add the written accent if necessary.' },
+          items: [
+            { say: 'Martínez', opts: ['Martinez', 'Martínez'], a: 1 },
+            { say: 'Lunes', opts: ['Lunes', 'Lúnes'], a: 0 },
+            { say: 'Autobús', opts: ['Autobus', 'Autobús'], a: 1 },
+            { say: 'Abril', opts: ['Abril', 'Ábril'], a: 0 },
+            { say: 'Paquistaní', opts: ['Paquistani', 'Paquistaní'], a: 1 },
+            { say: 'Fácil', opts: ['Facil', 'Fácil'], a: 1 },
+            { say: 'Mecánico', opts: ['Mecanico', 'Mecánico'], a: 1 },
+            { say: 'Actor', opts: ['Actor', 'Áctor'], a: 0 },
+            { say: 'Séptimo', opts: ['Septimo', 'Séptimo'], a: 1 },
+            { say: 'Feliz', opts: ['Feliz', 'Féliz'], a: 0 },
+            { say: 'Lámpara', opts: ['Lampara', 'Lámpara'], a: 1 },
+            { say: 'Sofá', opts: ['Sofa', 'Sofá'], a: 1 }
+          ] },
+        { type: 'choice', id: 'b4', n: '4', listen: true,
+          title: { es: '¿Qué oyes?', ko: '무엇이 들리나요?', en: 'What do you hear?' },
+          items: [
+            { say: 'Habló', opts: ['Hablo', 'Habló'], a: 1 },
+            { say: 'Carné', opts: ['Carne', 'Carné'], a: 1 },
+            { say: 'Pasó', opts: ['Paso', 'Pasó'], a: 1 },
+            { say: 'Duró', opts: ['Duro', 'Duró'], a: 1 },
+            { say: 'Regalo', opts: ['Regalo', 'Regaló'], a: 0 },
+            { say: 'Quitó', opts: ['Quito', 'Quitó'], a: 1 },
+            { say: 'Está', opts: ['Esta', 'Está'], a: 1 },
+            { say: 'Ahorro', opts: ['Ahorro', 'Ahorró'], a: 0 }
+          ] },
+        { type: 'dictation', id: 'b5', n: '5', listen: true,
+          title: { es: 'Dictado.', ko: '받아쓰기.', en: 'Dictation.' },
+          items: [
+            { say: 'Reinaldo nació el veinte de julio.' },
+            { say: 'Mi abuelo me regaló una bicicleta.' },
+            { say: 'El médico trabajó en un hospital.' },
+            { say: 'Me caí de la cuna y me rompí un brazo.' },
+            { say: 'El sábado compraron un teléfono.' }
+          ] }
+      ] },
+
+    /* ───────────── C ───────────── */
+    { id: 'c', tag: 'C', name: 'Léxico',
+      sub: { es: 'Números, momentos de la vida y el cuerpo humano', ko: '숫자, 인생의 순간들, 사람의 몸', en: 'Numbers, life events and the human body' },
+      blocks: [
+        { type: 'table', title: { es: '1a. Observa: los números', ko: '1a. 살펴보기: 숫자', en: '1a. Look: numbers' },
+          head: ['Número', 'En letras', 'Número', 'En letras'],
+          rows: [
+            ['101', 'ciento uno', '500', 'quinientos'],
+            ['110', 'ciento diez', '600', 'seiscientos'],
+            ['111', 'ciento once', '700', 'setecientos'],
+            ['150', 'ciento cincuenta', '800', 'ochocientos'],
+            ['151', 'ciento cincuenta y uno', '900', 'novecientos'],
+            ['200', 'doscientos', '1.000', 'mil'],
+            ['300', 'trescientos', '2.000', 'dos mil'],
+            ['400', 'cuatrocientos', '5.000', 'cinco mil'],
+            ['', '', '10.000', 'diez mil']
+          ],
+          note: { ko: '100은 cien, 101부터는 ciento. 200~900은 여성 명사 앞에서 -as (doscientas casas). 500 quinientos, 700 setecientos, 900 novecientos는 불규칙이에요.', en: '100 = cien, from 101 ciento. 200–900 take -as before feminine nouns. 500, 700 and 900 are irregular.' } },
+        { type: 'fill', id: 'c1b', n: '1b',
+          title: { es: 'Escribe en letras.', ko: '숫자를 글자로 쓰세요.', en: 'Write the numbers in words.' },
+          items: [
+            { q: '515 → ___', a: ['quinientos quince'] },
+            { q: '984 → ___', a: ['novecientos ochenta y cuatro'] },
+            { q: '1.022 → ___', a: ['mil veintidós'] },
+            { q: '2.476 → ___', a: ['dos mil cuatrocientos setenta y seis'] },
+            { q: '5.003 → ___', a: ['cinco mil tres'] },
+            { q: '9.257 → ___', a: ['nueve mil doscientos cincuenta y siete'] }
+          ] },
+        { type: 'match', id: 'c2a', n: '2a',
+          title: { es: 'Relaciona las ilustraciones con las expresiones. Hay tres momentos de su vida sin ilustración. ¿Cuáles son?', ko: '그림과 표현을 연결하세요. 그림이 없는 인생의 순간이 세 개 있어요. 무엇일까요?', en: 'Match the pictures with the expressions. Three life events have no picture. Which are they?' },
+          left: ['A 👰🤵 boda', 'B 💻 trabajando con el ordenador', 'C 🏫 en clase con otros estudiantes', 'D 👶🍼 bebé en la cuna', 'E 👩‍👧 madre con su bebé', 'F 🕯️❤️ cena romántica', 'G 🎓 recibe el título', 'H 📏👧 niña que mide su altura', 'I 👵📖 señora mayor leyendo en el sillón'],
+          right: ['1. Divorciarse.', '2. Crecer.', '3. Empezar a trabajar.', '4. Morirse.', '5. Tener hijos.', '6. Casarse.', '7. Jubilarse.', '8. Volver a casarse.', '9. Nacer.', '10. Licenciarse.', '11. Enamorarse.', '12. Estudiar en la universidad.'],
+          a: [5, 2, 11, 8, 4, 10, 9, 1, 6] },
+        { type: 'choice', id: 'c2a2', n: '2a',
+          title: { es: '¿Cuáles son los tres momentos sin ilustración?', ko: '그림이 없는 세 가지 순간은 무엇인가요?', en: 'Which three events have no picture?' },
+          items: [ { q: 'Los tres momentos sin ilustración son…', opts: ['Divorciarse, morirse y volver a casarse', 'Nacer, crecer y casarse', 'Jubilarse, enamorarse y tener hijos'], a: 0 } ] },
+        { type: 'open', id: 'c2b', n: '2b',
+          title: { es: 'Con las palabras y expresiones del ejercicio anterior inventa la vida de doña Carlota.', ko: '앞 연습의 단어와 표현으로 도냐 카를로타의 인생을 지어 보세요.', en: 'Use the words and expressions from the previous exercise to invent Doña Carlota’s life.' },
+          items: [ { q: 'Doña Carlota nació y creció en La Habana. En 1953 entró en la universidad para estudiar Medicina. En 1960…', model: 'En 1960 se licenció y empezó a trabajar en un hospital. En 1962 se enamoró de un médico y se casaron en 1963. Tuvieron dos hijos. En 1975 se divorció y en 1980 volvió a casarse. En 1995 se jubiló. Ahora lee mucho en su sillón.' } ] },
+        { type: 'fill', id: 'c3', n: '3',
+          title: { es: '¿Qué le duele? Escribe las partes del cuerpo.', ko: '어디가 아픈가요? 신체 부위를 쓰세요.', en: 'What hurts? Write the body parts.' },
+          bank: ['el estómago', 'la muela', 'el brazo', 'el pie', 'la mano', 'la pierna', 'la cabeza', 'el oído', 'el ojo', 'la garganta'],
+          items: [
+            { q: 'a. ✋ (la mano en la cara) → ___', a: ['la mano'] },
+            { q: 'b. 🧑‍🦱 (arriba, el pelo) → ___', a: ['la cabeza'] },
+            { q: 'c. 🦷 (dentro de la boca) → ___', a: ['la muela'] },
+            { q: 'd. 👁️ (ojo morado) → ___', a: ['el ojo'] },
+            { q: 'e. 👂 (oreja roja) → ___', a: ['el oído'] },
+            { q: 'f. 🧣 (con bufanda) → ___', a: ['la garganta'] },
+            { q: 'g. 💪 (escayolado, arriba) → ___', a: ['el brazo'] },
+            { q: 'h. 🫃 (la barriga) → ___', a: ['el estómago'] },
+            { q: 'i. 🦶 (dedo rojo) → ___', a: ['el pie'] },
+            { q: 'j. 🦵 (escayolada, abajo) → ___', a: ['la pierna'] }
+          ] }
+      ] },
+
+    /* ───────────── D1 ───────────── */
+    { id: 'd1', tag: 'D', name: 'Gramática',
+      sub: { es: 'Pretérito Indefinido', ko: '단순과거(부정과거)', en: 'The preterite (Pretérito Indefinido)' },
+      blocks: [
+        { type: 'table', title: { es: '1a. Observa: terminaciones del Pretérito Indefinido regular', ko: '1a. 살펴보기: 규칙 단순과거 어미', en: '1a. Look: regular preterite endings' },
+          head: ['', 'Verbos en -AR', 'Verbos en -ER y en -IR'],
+          rows: [ ['Yo', '-é', '-í'], ['Tú', '-aste', '-iste'], ['Él / ella / usted', '-ó', '-ió'], ['Nosotros/as', '-amos', '-imos'], ['Vosotros/as', '-asteis', '-isteis'], ['Ellos / ellas / ustedes', '-aron', '-ieron'] ],
+          note: { ko: '-ER와 -IR 동사는 어미가 같아요. yo와 él 형태에 강세 부호가 있어요.', en: '-ER and -IR verbs share the same endings. The yo and él forms carry an accent.' } },
+        { type: 'fill', id: 'd1b', n: '1b',
+          title: { es: 'Completa el cuadro.', ko: '표를 완성하세요.', en: 'Complete the table.' },
+          items: [
+            { q: 'HABLAR: yo hablé · tú ___ · él ___ · nosotros hablamos · vosotros ___ · ellos ___', a: ['hablaste', 'habló', 'hablasteis', 'hablaron'] },
+            { q: 'BEBER: yo ___ · tú bebiste · él ___ · nosotros ___ · vosotros bebisteis · ellos ___', a: ['bebí', 'bebió', 'bebimos', 'bebieron'] },
+            { q: 'VIVIR: yo ___ · tú ___ · él vivió · nosotros ___ · vosotros ___ · ellos vivieron', a: ['viví', 'viviste', 'vivimos', 'vivisteis'] }
+          ] },
+        { type: 'fill', id: 'd1c', n: '1c',
+          title: { es: 'Completa las frases con el Pretérito Indefinido.', ko: '단순과거로 문장을 완성하세요.', en: 'Complete the sentences with the preterite.' },
+          items: [
+            { q: 'Mis padres ___ toda la vida en Barcelona.', a: ['vivieron'], hint: 'vivir' },
+            { q: 'Yo ___ el 26 de febrero de 1964.', a: ['nací'], hint: 'nacer' },
+            { q: 'Mi hija ___ Medicina, pero después ___ Derecho.', a: ['comenzó', 'estudió'], hint: 'comenzar, estudiar' },
+            { q: 'Usted ___ de médico en un pueblo, ¿no?', a: ['trabajó'], hint: 'trabajar' },
+            { q: 'El año pasado tú ___ 50 años.', a: ['cumpliste'], hint: 'cumplir' },
+            { q: 'Hola Juan, ¿qué tal? ¿Te ___?', a: ['casaste'], hint: 'casar' },
+            { q: 'Mi madre ___ en dos días.', a: ['se curó'], hint: 'curarse' }
+          ] },
+        { type: 'table', title: { es: '2a. Pretéritos Indefinidos irregulares', ko: '2a. 불규칙 단순과거', en: '2a. Irregular preterites' },
+          head: ['', 'Ser / ir', 'Estar', 'Tener', 'Hacer'],
+          rows: [ ['Yo', 'fui', 'estuve', 'tuve', 'hice'], ['Tú', '?', '?', '?', 'hiciste'], ['Él / ella / usted', 'fue', 'estuvo', 'tuvo', 'hizo'], ['Nosotros/as', '?', '?', '?', 'hicimos'], ['Vosotros/as', '?', '?', '?', 'hicisteis'], ['Ellos / ellas / ustedes', '?', '?', '?', 'hicieron'] ],
+          note: { ko: 'ser와 ir는 단순과거 형태가 같아요. 불규칙 동사의 yo, él 형태에는 강세 부호가 없어요.', en: 'Ser and ir share the same preterite forms. Irregular yo/él forms have no written accent.' } },
+        { type: 'fill', id: 'd2a', n: '2a',
+          title: { es: 'Pretéritos Indefinidos irregulares. Completa el cuadro.', ko: '불규칙 단순과거. 표를 완성하세요.', en: 'Irregular preterites. Complete the table.' },
+          items: [
+            { q: 'SER / IR: fui · ___ · fue · ___ · ___ · ___', a: ['fuiste', 'fuimos', 'fuisteis', 'fueron'] },
+            { q: 'ESTAR: estuve · ___ · estuvo · ___ · ___ · ___', a: ['estuviste', 'estuvimos', 'estuvisteis', 'estuvieron'] },
+            { q: 'TENER: tuve · ___ · tuvo · ___ · ___ · ___', a: ['tuviste', 'tuvimos', 'tuvisteis', 'tuvieron'] }
+          ] },
+        { type: 'fill', id: 'd2b', n: '2b',
+          title: { es: '¿Qué hicieron ayer? Observa los dibujos y completa el cuadro.', ko: '어제 그들은 무엇을 했나요? 그림을 보고 완성하세요.', en: 'What did they do yesterday? Look at the pictures and complete.' },
+          items: [
+            { q: 'Por la mañana: ⏰ 7:00 🛏️ Se ___.', a: ['levantaron'], hint: 'levantarse' },
+            { q: 'Por la mañana: ☕🥐 ___ juntos.', a: ['Desayunaron'], hint: 'desayunar' },
+            { q: 'Por la tarde: 🕒 🍽️ ___ en casa.', a: ['Comieron'], hint: 'comer' },
+            { q: 'Por la tarde: 🕖 19:00 🗣️ ___ con un amigo en la calle.', a: ['Hablaron'], hint: 'hablar' },
+            { q: 'Por la noche: 🕙 🍷 ___ en un restaurante.', a: ['Cenaron'], hint: 'cenar' },
+            { q: 'Por la noche: 🕚 23:30 📖 ___ en la cama.', a: ['Leyeron'], hint: 'leer' }
+          ] },
+        { type: 'fill', id: 'd2c', n: '2c',
+          title: { es: 'Escribe el Indefinido de estos verbos en la persona indicada.', ko: '주어진 인칭으로 동사의 단순과거를 쓰세요.', en: 'Write the preterite of these verbs in the person given.' },
+          items: [
+            { q: 'a. Estar (yo) → ___', a: ['estuve'] },
+            { q: 'b. Beber (nosotros) → ___', a: ['bebimos'] },
+            { q: 'c. Hacer (usted) → ___', a: ['hizo'] },
+            { q: 'd. Estudiar (tú) → ___', a: ['estudiaste'] },
+            { q: 'e. Vivir (ella) → ___', a: ['vivió'] },
+            { q: 'f. Caerse (ellos) → ___', a: ['se cayeron'] },
+            { q: 'g. Tener (vosotras) → ___', a: ['tuvisteis'] },
+            { q: 'h. Levantarse (yo) → ___', a: ['me levanté'] },
+            { q: 'i. Trabajar (yo) → ___', a: ['trabajé'] },
+            { q: 'j. Ser (tú) → ___', a: ['fuiste'] },
+            { q: 'k. Hablar (usted) → ___', a: ['habló'] },
+            { q: 'l. Desayunar (tú) → ___', a: ['desayunaste'] }
+          ] }
+      ] },
+
+    /* ───────────── D2 ───────────── */
+    { id: 'd2', tag: 'D', name: 'Gramática',
+      sub: { es: 'El verbo DOLER y las frases exclamativas', ko: 'DOLER 동사와 감탄문', en: 'The verb DOLER and exclamations' },
+      blocks: [
+        { type: 'table', title: { es: '3a. Observa: DOLER', ko: '3a. 살펴보기: DOLER (아프다)', en: '3a. Look: DOLER (to hurt)' },
+          head: ['', 'DOLER', ''],
+          rows: [ ['Me / Te / Le', 'DUELE', 'la cabeza, la pierna, el estómago'], ['Nos / Os / Les', 'DUELEN', 'las muelas, los oídos, los pies'] ],
+          note: { ko: 'DOLER는 GUSTAR처럼 써요. 아픈 부위가 단수면 duele, 복수면 duelen. 대명사(me, te, le…)는 아픈 사람이에요.', en: 'DOLER works like GUSTAR: singular body part → duele, plural → duelen. The pronoun (me, te, le…) is the person who hurts.' } },
+        { type: 'fill', id: 'd3b', n: '3b',
+          title: { es: 'Escribe frases con DUELE o DUELEN debajo de cada dibujo.', ko: '각 그림 아래에 DUELE 또는 DUELEN으로 문장을 쓰세요.', en: 'Write sentences with DUELE or DUELEN under each picture.' },
+          items: [
+            { q: '1. 🙍‍♀️ (mano en la frente) Le ___ ___.', a: ['duele', 'la cabeza'] },
+            { q: '2. 👦 (manos en la barriga) Le ___ ___.', a: ['duele', 'el estómago|la barriga|la tripa'] },
+            { q: '3. 👵 (mano en la espalda, con bastón) Le ___ ___.', a: ['duele', 'la espalda'] },
+            { q: '4. 👱‍♀️ (manos en las orejas) Le ___ ___.', a: ['duelen', 'los oídos'] },
+            { q: '5. 🧒 (brazo escayolado) Le ___ ___.', a: ['duele', 'el brazo'] },
+            { q: '6. 👨 (manos en las mejillas) Le ___ ___.', a: ['duelen', 'las muelas'] },
+            { q: '7. 👧 (manos en los ojos) Le ___ ___.', a: ['duelen', 'los ojos'] },
+            { q: '8. 👴 (pies en agua caliente) Le ___ ___.', a: ['duelen', 'los pies'] },
+            { q: '9. 👨 (manos vendadas) Le ___ ___.', a: ['duelen', 'las manos'] },
+            { q: '10. 👦 (pierna escayolada) Le ___ ___.', a: ['duele', 'la pierna'] }
+          ] },
+        { type: 'fill', id: 'd3c', n: '3c',
+          title: { es: 'Completa con DUELE o DUELEN.', ko: 'DUELE 또는 DUELEN으로 완성하세요.', en: 'Complete with DUELE or DUELEN.' },
+          bank: ['duele', 'duelen'],
+          items: [
+            { q: 'A Reinaldo le ___ la cabeza.', a: ['duele'] },
+            { q: 'Me ___ los pies. ¿Nos sentamos?', a: ['duelen'] },
+            { q: 'Voy a la farmacia, que a mi madre le ___ mucho la espalda.', a: ['duele'] },
+            { q: '¿Te ___ algo? Tienes mala cara.', a: ['duele'] },
+            { q: 'Jesús y María comieron algo malo y les ___ el estómago.', a: ['duele'] },
+            { q: '¿A ti no te ___ los oídos con esta música tan alta? Bájala un poco, hombre.', a: ['duelen'] },
+            { q: 'Le ___ las piernas de no andar.', a: ['duelen'] },
+            { q: 'Está en el dentista porque le ___ las muelas.', a: ['duelen'] }
+          ] },
+        { type: 'table', title: { es: '4a. Observa: frases exclamativas', ko: '4a. 살펴보기: 감탄문', en: '4a. Look: exclamations' },
+          head: ['Estructura', 'Ejemplo'],
+          rows: [ ['¡Qué (+ adjetivo) + sustantivo!', '¡Qué (mala) suerte!'], ['¡Qué + adjetivo (+ verbo)!', '¡Qué bonito (es)!'], ['¡Qué + sustantivo (+ verbo)!', '¡Qué calor (tengo)!'], ['¡Qué + adverbio (+ verbo)!', '¡Qué bien (trabaja)!'] ],
+          note: { ko: '감탄문은 ¡Qué...!로 만들고 qué에 항상 강세 부호가 있어요.', en: 'Exclamations use ¡Qué...!, always with an accent on qué.' } },
+        { type: 'match', id: 'd4b', n: '4b',
+          title: { es: 'Escribe una frase exclamativa para cada situación.', ko: '각 상황에 맞는 감탄문을 고르세요.', en: 'Choose an exclamation for each situation.' },
+          left: ['1. No entiendo la letra de mi hijo.', '2. Heredó mucho dinero de su abuelo.', '3. Se rompió la pierna esquiando.', '4. Tiene los ojos azules.', '5. La temperatura es de 5 °C bajo cero.', '6. Su tío murió el año pasado.', '7. Todos los hombres miran a Sofía.', '8. Ayer me encontré con un viejo amigo.'],
+          right: ['¡Qué dolor!', '¡Qué pena!', '¡Qué gran sorpresa!', '¡Qué bonitos son!', '¡Qué guapa es!', '¡Qué mal escribe!', '¡Qué buena suerte!', '¡Qué frío hace!'],
+          a: [5, 6, 0, 3, 7, 1, 4, 2] }
+      ] },
+
+    /* ───────────── E ───────────── */
+    { id: 'e', tag: 'E', name: 'Expresión oral',
+      sub: { es: 'Narrar la vida y hablar con el médico', ko: '인생 이야기하기와 의사와 대화하기', en: 'Narrating a life and talking to the doctor' },
+      blocks: [
+        { type: 'table', title: { es: 'Expresiones para decir cuándo ocurrió algo', ko: '언제 일어났는지 말하는 표현', en: 'Expressions to say when something happened' },
+          head: ['adverbios', 'el / la + sustantivo', 'hace + sustantivo', 'en + año o sustantivo'],
+          rows: [ ['ayer', 'el lunes', 'hace una hora', 'en 1990'], ['anoche', 'el sábado', 'hace un rato', 'en abril'], ['anteayer', 'el otro día', 'hace tiempo', 'en julio'], ['anteanoche', 'el mes/año pasado', 'hace días / meses / años', ''], ['', 'el día 10', '', ''] ],
+          note: { ko: 'ayer 어제, anoche 어젯밤, anteayer 그저께, hace + 기간 = ~ 전에', en: 'ayer yesterday, anoche last night, anteayer the day before yesterday, hace + time = … ago' } },
+        { type: 'table', title: { es: 'Más expresiones de tiempo', ko: '더 많은 시간 표현', en: 'More time expressions' },
+          head: ['de + adjetivo o sustantivo', 'a los X años', 'cuando + indefinido', 'al + infinitivo'],
+          rows: [ ['de pequeño', 'a los 3 años', 'cuando nací', 'al nacer'], ['de niño', 'a los 9 años', 'cuando fue', 'al cumplir 30 años'], ['de joven', '', 'cuando salí', ''] ] },
+        { type: 'speak', n: '1a',
+          title: { es: 'Pregunta a tu compañero cosas de su vida y escribe los datos.', ko: '짝에게 인생에 대해 묻고 정보를 적으세요.', en: 'Ask your partner about their life and write down the information.' },
+          prompt: { ko: '짝에게 언제 태어났는지, 언제 공부를 마쳤는지 등을 물어보세요.', en: 'Ask your partner when they were born, when they finished school, etc.' },
+          model: [ { who: 'A', es: '¿Cuándo naciste?' }, { who: 'B', es: 'Nací en 1970.' }, { who: 'A', es: '¿Cuándo terminaste los estudios?' }, { who: 'B', es: 'Hace dos años.' }, { who: 'A', es: '¿Y cuándo te casaste?' }, { who: 'B', es: 'A los 27 años.' } ] },
+        { type: 'vocab', title: { es: 'Conectores para contar una vida', ko: '인생 이야기를 위한 연결어', en: 'Connectors to tell a life story' },
+          items: [
+            { es: 'Primero', ko: '먼저', en: 'First', e: '1️⃣' },
+            { es: 'Luego / después', ko: '그 다음에 / 후에', en: 'Then / afterwards', e: '➡️' },
+            { es: 'Pero', ko: '하지만', en: 'But', e: '↔️' },
+            { es: 'Entonces', ko: '그때 / 그래서', en: 'Then / so', e: '🔁' },
+            { es: 'Por último', ko: '마지막으로', en: 'Lastly', e: '🔚' },
+            { es: 'Al final', ko: '결국', en: 'In the end', e: '🏁' }
+          ] },
+        { type: 'open', id: 'e1b', n: '1b',
+          title: { es: 'Ahora escribe su vida.', ko: '이제 짝의 인생을 쓰세요.', en: 'Now write their life story.' },
+          items: [ { q: 'La vida de mi compañero/a (Primero, luego, después, pero, entonces, por último, al final):', model: 'Mi compañera nació en 1970. De pequeña vivió en Madrid. Primero estudió en la universidad y terminó los estudios hace dos años. Luego empezó a trabajar. A los 27 años se casó. Al final se fue a vivir a Sevilla.' } ] },
+        { type: 'speak', n: '2',
+          title: { es: 'Formamos dos grupos. Con tu grupo escribe diez preguntas sobre hechos históricos. ¿Saben tus compañeros las respuestas?', ko: '두 그룹으로 나눠요. 그룹별로 역사적 사실에 대한 질문 10개를 쓰세요. 상대 그룹이 답을 알까요?', en: 'Form two groups. Write ten questions about historical events. Do the others know the answers?' },
+          prompt: { ko: '역사 퀴즈를 만들어 서로 물어보세요.', en: 'Make a history quiz and ask each other.' },
+          model: [ { who: 'A', es: '¿En qué año fue la Revolución Francesa?' }, { who: 'B', es: 'En 1789.' }, { who: 'A', es: '¿Cuándo ganó Argentina su segunda Copa del Mundo?' }, { who: 'B', es: 'En 1986.' }, { who: 'A', es: '¿En qué año pisó el hombre la Luna por primera vez?' }, { who: 'B', es: 'En 1969.' } ] },
+        { type: 'reading', title: { es: 'Historia clínica (Insalud)', ko: '진료 기록 (Insalud)', en: 'Medical record (Insalud)' },
+          paras: [
+            { es: 'Apellidos: Martínez Sanz. Nombre: Agustín. N.º de historia clínica: 5678. Doctor: Aranguren.', ko: '성: 마르티네스 산스. 이름: 아구스틴. 진료 기록 번호: 5678. 의사: 아랑구렌.', en: 'Surnames: Martínez Sanz. Name: Agustín. Record no.: 5678. Doctor: Aranguren.' },
+            { es: 'Datos personales — Edad: 30. Fecha de nacimiento: 04.06.73. Lugar: Córdoba. Estado civil: soltero. Estudios: licenciado. Profesión: abogado.', ko: '인적 사항 — 나이: 30. 생년월일: 73.06.04. 출생지: 코르도바. 결혼 여부: 미혼. 학력: 대졸. 직업: 변호사.', en: 'Personal data — Age: 30. Date of birth: 04.06.73. Place: Córdoba. Marital status: single. Studies: graduate. Profession: lawyer.' },
+            { es: 'Antecedentes personales: alergias a los 10 años, operación de rodilla en 1989.', ko: '병력: 10살 때 알레르기, 1989년 무릎 수술.', en: 'Medical history: allergies at age 10, knee operation in 1989.' },
+            { es: 'Motivo de consulta: dolor de cabeza y garganta, fiebre alta, tos y malestar general.', ko: '내원 이유: 두통과 인후통, 고열, 기침, 전신 불편감.', en: 'Reason for visit: headache and sore throat, high fever, cough and general discomfort.' },
+            { es: 'Exploración: garganta irritada, fiebre. Diagnóstico: gripe. Tratamiento: aspirinas, antibiótico, vitamina.', ko: '진찰: 목 염증, 열. 진단: 독감. 처방: 아스피린, 항생제, 비타민.', en: 'Examination: irritated throat, fever. Diagnosis: flu. Treatment: aspirin, antibiotic, vitamins.' }
+          ] },
+        { type: 'choice', id: 'e3', n: '3',
+          title: { es: 'Observa la historia clínica y responde a las preguntas.', ko: '진료 기록을 보고 질문에 답하세요.', en: 'Look at the medical record and answer the questions.' },
+          items: [
+            { q: '1. ¿Cómo se llama el paciente?', opts: ['Agustín Martínez Sanz', 'Aranguren', 'Martín Sanz Agustín'], a: 0 },
+            { q: '2. ¿Cómo se llama el médico?', opts: ['Agustín', 'Aranguren', 'Insalud'], a: 1 },
+            { q: '3. ¿Tuvo alguna operación?', opts: ['No, nunca.', 'Sí, de rodilla en 1989.', 'Sí, de garganta a los 10 años.'], a: 1 },
+            { q: '4. ¿Qué le pasa? ¿Qué le duele?', opts: ['Le duelen la cabeza y la garganta; tiene fiebre alta, tos y malestar general.', 'Le duele la rodilla.', 'Le duelen las muelas.'], a: 0 },
+            { q: '5. ¿Tiene fiebre?', opts: ['Sí, fiebre alta.', 'No, no tiene fiebre.'], a: 0 },
+            { q: '6. ¿Qué enfermedad tiene?', opts: ['Alergia', 'Gripe', 'Una operación'], a: 1 }
+          ] },
+        { type: 'speak', n: '4',
+          title: { es: 'Haz un diálogo con tu compañero. Uno es un médico y el otro un paciente.', ko: '짝과 대화를 만드세요. 한 명은 의사, 다른 한 명은 환자예요.', en: 'Make a dialogue with your partner. One is a doctor and the other a patient.' },
+          prompt: { ko: '의사는 증상을 묻고, 환자는 어디가 아픈지 설명하세요.', en: 'The doctor asks about symptoms; the patient explains what hurts.' },
+          model: [ { who: 'Médica', es: '¿Qué le pasa?' }, { who: 'Paciente', es: 'No puedo dormir por las noches.' }, { who: 'Médica', es: '¿Le duele algo?' }, { who: 'Paciente', es: 'Sí, me duelen la cabeza y la espalda.' }, { who: 'Médica', es: '¿Tiene fiebre?' }, { who: 'Paciente', es: 'No, no tengo fiebre.' }, { who: 'Médica', es: 'Tome estas pastillas y descanse.' } ] }
+      ] },
+
+    /* ───────────── MUNDO HISPANO ───────────── */
+    { id: 'mundo', tag: '', name: 'Mundo hispano',
+      sub: { es: 'Los Premios Nobel de Literatura en español', ko: '스페인어권 노벨 문학상 수상자들', en: 'Nobel Prizes in Literature in Spanish' },
+      blocks: [
+        { type: 'reading', title: { es: 'Los Premios Nobel de Literatura en español', ko: '스페인어권 노벨 문학상', en: 'Nobel Prizes in Literature in Spanish' },
+          paras: [
+            { es: '<b>Vicente Aleixandre</b>. Nació en Sevilla, España, en 1898. Estudió Derecho y Comercio. Fue un poeta de la Generación del 27. Publicó su obra <i>La destrucción o el amor</i>. Recibió el Premio Nobel de Literatura en 1977.', ko: '비센테 알레익산드레. 1898년 스페인 세비야 출생. 법학과 상학 전공. 27세대 시인. 『파괴 또는 사랑』 출간. 1977년 노벨 문학상 수상.', en: 'Vicente Aleixandre. Born in Seville, Spain, in 1898. Studied Law and Commerce. A poet of the Generation of ’27. Published “La destrucción o el amor”. Nobel Prize 1977.' },
+            { es: '<b>Miguel Ángel Asturias</b>. Nació en la ciudad de Guatemala en 1889. Estudió Derecho y fue diputado y embajador. Publicó su novela <i>El señor Presidente</i> en 1946. Murió en Madrid en 1974. Recibió el Premio Nobel de Literatura en 1967.', ko: '미겔 앙헬 아스투리아스. 1889년 과테말라시티 출생. 법학 전공, 국회의원과 대사 역임. 1946년 소설 『대통령 각하』 출간. 1974년 마드리드에서 사망. 1967년 노벨 문학상.', en: 'Miguel Ángel Asturias. Born in Guatemala City in 1889. Studied Law; deputy and ambassador. Published the novel “El señor Presidente” in 1946. Died in Madrid in 1974. Nobel Prize 1967.' },
+            { es: '<b>Jacinto Benavente</b>. Nació en Madrid, España, en 1866. Fue un dramaturgo. Publicó <i>La malquerida</i> y <i>Los intereses creados</i>. Recibió el Premio Nobel de Literatura en 1922.', ko: '하신토 베나벤테. 1866년 스페인 마드리드 출생. 극작가. 『미움받는 여자』, 『타산적 이해관계』 출간. 1922년 노벨 문학상.', en: 'Jacinto Benavente. Born in Madrid, Spain, in 1866. A playwright. Published “La malquerida” and “Los intereses creados”. Nobel Prize 1922.' },
+            { es: '<b>Camilo José Cela</b>. Nació en el pueblo de Iria Flavia, España, en 1916. Tuvo varios empleos. Publicó la famosa novela <i>La colmena</i> en 1949. Recibió el Premio Nobel de Literatura en 1989.', ko: '카밀로 호세 셀라. 1916년 스페인 이리아 플라비아 마을 출생. 여러 직업을 가짐. 1949년 유명한 소설 『벌집』 출간. 1989년 노벨 문학상.', en: 'Camilo José Cela. Born in the village of Iria Flavia, Spain, in 1916. Had several jobs. Published the famous novel “La colmena” in 1949. Nobel Prize 1989.' },
+            { es: '<b>José Echegaray</b>. Nació en Madrid, España, en 1832. Fue ingeniero de caminos, financiero y economista, político y dramaturgo. Publicó <i>Mancha que limpia</i>. Recibió el Premio Nobel de Literatura en 1904.', ko: '호세 에체가라이. 1832년 스페인 마드리드 출생. 토목 기사, 금융가, 경제학자, 정치가, 극작가. 『씻어내는 얼룩』 출간. 1904년 노벨 문학상.', en: 'José Echegaray. Born in Madrid, Spain, in 1832. Civil engineer, financier, economist, politician and playwright. Published “Mancha que limpia”. Nobel Prize 1904.' },
+            { es: '<b>Gabriel García Márquez</b>. Nació en Aracataca, Colombia. Al terminar el Bachillerato, escribió en periódicos. Publicó la famosa obra <i>Cien años de soledad</i>. Recibió el Premio Nobel de Literatura en 1982, principalmente por sus novelas.', ko: '가브리엘 가르시아 마르케스. 콜롬비아 아라카타카 출생. 고등학교 졸업 후 신문에 글을 씀. 유명한 작품 『백년의 고독』 출간. 1982년 주로 소설로 노벨 문학상.', en: 'Gabriel García Márquez. Born in Aracataca, Colombia. After high school he wrote for newspapers. Published “One Hundred Years of Solitude”. Nobel Prize 1982, mainly for his novels.' },
+            { es: '<b>Juan Ramón Jiménez</b>. Nació en Moguer, España, en 1881. Vivió en Cuba, EE. UU. y Puerto Rico. Publicó <i>Platero y yo</i>, obra en prosa, pero él fue poeta. Recibió el Premio Nobel de Literatura en 1956.', ko: '후안 라몬 히메네스. 1881년 스페인 모게르 출생. 쿠바, 미국, 푸에르토리코에서 삶. 산문 작품 『플라테로와 나』를 출간했지만 그는 시인이었음. 1956년 노벨 문학상.', en: 'Juan Ramón Jiménez. Born in Moguer, Spain, in 1881. Lived in Cuba, the USA and Puerto Rico. Published “Platero y yo”, a prose work, but he was a poet. Nobel Prize 1956.' },
+            { es: '<b>Gabriela Mistral</b>. Su nombre verdadero fue Lucila Godoy. Nació en 1889, en Vicuña, Chile. Fue una incansable viajera. Escribió <i>Desolación</i> y <i>Ternura</i>. Recibió el Premio Nobel de Literatura en 1945.', ko: '가브리엘라 미스트랄. 본명은 루실라 고도이. 1889년 칠레 비쿠냐 출생. 지칠 줄 모르는 여행가. 『황폐』, 『다정함』 집필. 1945년 노벨 문학상.', en: 'Gabriela Mistral. Her real name was Lucila Godoy. Born in 1889 in Vicuña, Chile. A tireless traveller. Wrote “Desolación” and “Ternura”. Nobel Prize 1945.' },
+            { es: '<b>Pablo Neruda</b>. Nació en 1904 en Parral, Chile. Escribió <i>Veinte poemas de amor y una canción desesperada</i>. Recibió el Premio Nobel de Literatura en 1971.', ko: '파블로 네루다. 1904년 칠레 파랄 출생. 『스무 편의 사랑의 시와 한 편의 절망의 노래』 집필. 1971년 노벨 문학상.', en: 'Pablo Neruda. Born in 1904 in Parral, Chile. Wrote “Twenty Love Poems and a Song of Despair”. Nobel Prize 1971.' },
+            { es: '<b>Octavio Paz</b>. Nació en Mixcoac, México, en 1914. Formó parte del cuerpo diplomático de México. Escribió poemas y ensayos sobre la poesía. Escribió <i>El laberinto de la soledad</i> y <i>Blanco</i>. Recibió el Premio Nobel de Literatura en 1990.', ko: '옥타비오 파스. 1914년 멕시코 믹스코악 출생. 멕시코 외교관으로 활동. 시와 시에 관한 에세이를 씀. 『고독의 미로』, 『블랑코』 집필. 1990년 노벨 문학상.', en: 'Octavio Paz. Born in Mixcoac, Mexico, in 1914. Was a Mexican diplomat. Wrote poems and essays on poetry. Wrote “The Labyrinth of Solitude” and “Blanco”. Nobel Prize 1990.' }
+          ] },
+        { type: 'fill', id: 'm1', n: '1',
+          title: { es: 'Lee los textos y completa el cuadro: año del premio y nacionalidad.', ko: '글을 읽고 표를 완성하세요: 수상 연도와 국적.', en: 'Read the texts and complete the table: prize year and nationality.' },
+          items: [
+            { q: 'José Echegaray: premio en ___, nacionalidad ___', a: ['1904', 'española|español'] },
+            { q: 'Jacinto Benavente: premio en ___, nacionalidad ___', a: ['1922', 'española|español'] },
+            { q: 'Gabriela Mistral: premio en ___, nacionalidad ___', a: ['1945', 'chilena'] },
+            { q: 'Juan Ramón Jiménez: premio en ___, nacionalidad ___', a: ['1956', 'española|español'] },
+            { q: 'Miguel Ángel Asturias: premio en ___, nacionalidad ___', a: ['1967', 'guatemalteca|guatemalteco'] },
+            { q: 'Pablo Neruda: premio en ___, nacionalidad ___', a: ['1971', 'chilena|chileno'] },
+            { q: 'Vicente Aleixandre: premio en ___, nacionalidad ___', a: ['1977', 'española|español'] },
+            { q: 'Gabriel García Márquez: premio en ___, nacionalidad ___', a: ['1982', 'colombiana|colombiano'] },
+            { q: 'Camilo José Cela: premio en ___, nacionalidad ___', a: ['1989', 'española|español'] },
+            { q: 'Octavio Paz: premio en ___, nacionalidad ___', a: ['1990', 'mexicana|mexicano'] }
+          ] },
+        { type: 'match', id: 'm2', n: '1',
+          title: { es: 'Completa el cuadro: una obra de cada autor.', ko: '표 완성: 각 작가의 작품 하나를 연결하세요.', en: 'Complete the table: one work by each author.' },
+          left: ['José Echegaray', 'Jacinto Benavente', 'Gabriela Mistral', 'Juan Ramón Jiménez', 'Miguel Ángel Asturias', 'Pablo Neruda', 'Vicente Aleixandre', 'Gabriel García Márquez', 'Camilo José Cela', 'Octavio Paz'],
+          right: ['Mancha que limpia', 'La malquerida', 'Desolación', 'Platero y yo', 'El señor Presidente', 'Veinte poemas de amor y una canción desesperada', 'La destrucción o el amor', 'Cien años de soledad', 'La colmena', 'El laberinto de la soledad'],
+          a: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] },
+        { type: 'classify', id: 'm3', n: '1',
+          title: { es: 'Completa el cuadro: género literario.', ko: '표 완성: 문학 장르로 분류하세요.', en: 'Complete the table: literary genre.' },
+          cats: ['Teatro (dramaturgo)', 'Poesía (poeta)', 'Novela (novelista)'],
+          items: [
+            { w: 'José Echegaray', c: 0 }, { w: 'Jacinto Benavente', c: 0 },
+            { w: 'Gabriela Mistral', c: 1 }, { w: 'Juan Ramón Jiménez', c: 1 }, { w: 'Pablo Neruda', c: 1 }, { w: 'Vicente Aleixandre', c: 1 }, { w: 'Octavio Paz', c: 1 },
+            { w: 'Miguel Ángel Asturias', c: 2 }, { w: 'Gabriel García Márquez', c: 2 }, { w: 'Camilo José Cela', c: 2 }
+          ] }
+      ] },
+
+    /* ───────────── SÍNTESIS ───────────── */
+    { id: 'sintesis', tag: '', name: 'Síntesis',
+      sub: { es: 'En Urgencias · Juego de la oca', ko: '응급실에서 · 보드게임', en: 'At the ER · board game' },
+      blocks: [
+        { type: 'note', es: 'Imagen: la puerta de URGENCIAS de un hospital. Horario de visitas de enfermos: de 11 a 12 y de 16 a 18. Personajes: 1. una chica sudando con un bote de jarabe; 2. dos ancianos abrazados; 3. una madre con un bebé que llora; 4. dos enfermeros llevan a un hombre en una camilla; 5. un grupo de amigos se abraza. Hay un coche de policía.',
+          ko: '그림: 병원 응급실 입구. 1) 땀 흘리며 시럽 병을 든 여자, 2) 서로 안고 있는 노부부, 3) 우는 아기를 안은 엄마, 4) 들것에 실린 남자, 5) 서로 껴안는 친구들. 경찰차도 있어요.',
+          en: 'Picture: a hospital ER entrance. 1) a sweating girl with a syrup bottle, 2) an elderly couple hugging, 3) a mother with a crying baby, 4) a man on a stretcher, 5) friends hugging. There is a police car.' },
+        { type: 'speak', n: '1',
+          title: { es: 'Observa la imagen. Piensa en uno de los personajes e imagina por qué está aquí.', ko: '그림을 보고 인물 한 명을 골라 왜 여기 있는지 상상해 보세요.', en: 'Look at the picture. Choose a character and imagine why they are here.' },
+          prompt: { ko: '단순과거와 DOLER를 써서 그 사람에게 무슨 일이 있었는지 이야기하세요.', en: 'Use the preterite and DOLER to tell what happened to them.' },
+          model: [ { who: 'A', es: 'El hombre de la camilla tuvo un accidente de moto. Se rompió una pierna.' }, { who: 'B', es: 'La chica número 1 comió algo malo y le duele mucho el estómago.' }, { who: 'A', es: 'El bebé tiene fiebre. Su madre está muy preocupada.' } ] },
+        { type: 'fill', id: 's2', n: '2',
+          title: { es: 'Formamos grupos de 4. Tira el dado, mueve la ficha y completa la frase de la casilla.', ko: '4명씩 그룹을 만들어요. 주사위를 던지고 말을 움직여 칸의 문장을 완성하세요.', en: 'Form groups of 4. Roll the die, move your counter and complete the sentence in the square.' },
+          items: [
+            { q: '1. A mí no ___ gustan los hospitales.', a: ['me'] },
+            { q: '2. A Nuria ___ duele la cabeza.', a: ['le'] },
+            { q: '3. ¡___ dolor tengo!', a: ['Qué'] },
+            { q: '5. ¿Qué te ___?', a: ['duele'], hint: 'doler' },
+            { q: '6. Mi mujer ___ un hijo ayer.', a: ['tuvo'], hint: 'tener' },
+            { q: '7. Mi abuelo ___ policía de joven.', a: ['fue'], hint: 'ser' },
+            { q: '9. El año pasado ___ un accidente.', a: ['tuvieron'], hint: 'tener / ellos' },
+            { q: '10. Desde ayer me ___ los pies.', a: ['duelen'], hint: 'doler' },
+            { q: '11. Toni se ___ una moto ayer.', a: ['compró'], hint: 'comprar' },
+            { q: '12. A este señor le ___ las muelas.', a: ['duelen'], hint: 'doler' },
+            { q: '13. Anoche la policía ___ tarde.', a: ['llegó'], hint: 'llegar' },
+            { q: '14. ¿___ vosotros ayer en la fiesta de Juan?', a: ['Estuvisteis'], hint: 'estar' },
+            { q: '15. El domingo nosotros ___ a pasear al parque.', a: ['fuimos'], hint: 'ir' },
+            { q: '16. Ayer ___ mucho.', a: ['dormí'], hint: 'dormir / yo' },
+            { q: '17. Ya no nos ___ la espalda.', a: ['duele'], hint: 'doler' },
+            { q: '18. A mi padre ___ duele la pierna.', a: ['le'] },
+            { q: '20. El otro día mi hijo ___ 40 años.', a: ['cumplió'], hint: 'cumplir' },
+            { q: '21. ¿Dónde ___ Patricia el año pasado?', a: ['estudió'], hint: 'estudiar' },
+            { q: '22. Me subí al árbol y ___.', a: ['me caí'], hint: 'caerse' },
+            { q: '23. ___ en 1975.', a: ['Nací'], hint: 'nacer / yo' },
+            { q: '24. En abril ___ mi hermana.', a: ['se casó'], hint: 'casarse' },
+            { q: '26. ¡___ gran sorpresa!', a: ['Qué'] },
+            { q: '27. ___ a los ochenta y tres años.', a: ['Murió|Se murió'], hint: 'morir' },
+            { q: '28. ¿___ la carrera el año pasado?', a: ['Terminaste'], hint: 'terminar / tú' }
+          ] }
+      ] },
+
+    /* ───────────── YA CONOCES ───────────── */
+    { id: 'yaconoces', tag: '', name: 'Ya conoces',
+      sub: { es: 'Resumen de la unidad', ko: '단원 요약', en: 'Unit summary' },
+      blocks: [
+        { type: 'table', title: { es: '1. Las expresiones para decir cuándo ocurrió un suceso pasado', ko: '1. 과거 사건이 언제 일어났는지 말하는 표현', en: '1. Expressions to say when a past event happened' },
+          head: ['adverbios', 'el / la + sustantivo', 'hace + sustantivo', 'en + año o sustantivo', 'de + adjetivo o sustantivo', 'a los X años', 'cuando + indefinido', 'al + infinitivo'],
+          rows: [
+            ['ayer', 'el lunes', 'hace una hora', 'en 1990', 'de pequeño', 'a los 3 años', 'cuando nací', 'al nacer'],
+            ['anoche', 'el otro día', 'hace un rato', 'en abril', 'de niño', 'a los 9 años', 'cuando fue', 'al cumplir 30 años'],
+            ['anteayer', 'el mes pasado', 'hace tiempo', 'en julio', 'de joven', '', 'cuando salí', ''],
+            ['anteanoche', '', '', '', '', '', '', '']
+          ] },
+        { type: 'vocab', title: { es: '2a. Los verbos para indicar momentos en la vida de una persona', ko: '2a. 인생의 순간을 나타내는 동사', en: '2a. Verbs for life events' },
+          items: [
+            { es: 'nacer', ko: '태어나다', en: 'to be born', e: '👶' },
+            { es: 'estudiar', ko: '공부하다', en: 'to study', e: '📚' },
+            { es: 'licenciarse', ko: '대학을 졸업하다', en: 'to graduate', e: '🎓' },
+            { es: 'trabajar', ko: '일하다', en: 'to work', e: '💼' },
+            { es: 'casarse', ko: '결혼하다', en: 'to get married', e: '💍' },
+            { es: 'divorciarse', ko: '이혼하다', en: 'to get divorced', e: '💔' },
+            { es: 'jubilarse', ko: '은퇴하다', en: 'to retire', e: '🏖️' },
+            { es: 'morirse', ko: '죽다', en: 'to die', e: '⚰️' }
+          ] },
+        { type: 'vocab', title: { es: '2b. Las partes del cuerpo', ko: '2b. 신체 부위', en: '2b. Body parts' },
+          items: [
+            { es: 'el estómago', ko: '배, 위', en: 'stomach', e: '🫃' },
+            { es: 'las muelas', ko: '어금니', en: 'molars', e: '🦷' },
+            { es: 'el brazo', ko: '팔', en: 'arm', e: '💪' },
+            { es: 'los pies', ko: '발', en: 'feet', e: '🦶' },
+            { es: 'las manos', ko: '손', en: 'hands', e: '✋' },
+            { es: 'la pierna', ko: '다리', en: 'leg', e: '🦵' },
+            { es: 'la cabeza', ko: '머리', en: 'head', e: '🧠' },
+            { es: 'los oídos', ko: '귀(속귀)', en: 'ears (inner)', e: '👂' },
+            { es: 'los ojos', ko: '눈', en: 'eyes', e: '👀' }
+          ] },
+        { type: 'table', title: { es: '3a. El Pretérito Indefinido regular', ko: '3a. 규칙 단순과거', en: '3a. Regular preterite' },
+          head: ['', 'Hablar (-AR)', 'Beber (-ER)', 'Vivir (-IR)'],
+          rows: [ ['Yo', 'hablé', 'bebí', 'viví'], ['Tú', 'hablaste', 'bebiste', 'viviste'], ['Él / ella / usted', 'habló', 'bebió', 'vivió'], ['Nosotros/as', 'hablamos', 'bebimos', 'vivimos'], ['Vosotros/as', 'hablasteis', 'bebisteis', 'vivisteis'], ['Ellos / ellas / ustedes', 'hablaron', 'bebieron', 'vivieron'] ] },
+        { type: 'table', title: { es: '3b. El Pretérito Indefinido irregular', ko: '3b. 불규칙 단순과거', en: '3b. Irregular preterite' },
+          head: ['', 'Ser / ir', 'Estar', 'Tener', 'Hacer'],
+          rows: [ ['Yo', 'fui', 'estuve', 'tuve', 'hice'], ['Tú', 'fuiste', 'estuviste', 'tuviste', 'hiciste'], ['Él / ella / usted', 'fue', 'estuvo', 'tuvo', 'hizo'], ['Nosotros/as', 'fuimos', 'estuvimos', 'tuvimos', 'hicimos'], ['Vosotros/as', 'fuisteis', 'estuvisteis', 'tuvisteis', 'hicisteis'], ['Ellos / ellas / ustedes', 'fueron', 'estuvieron', 'tuvieron', 'hicieron'] ] },
+        { type: 'table', title: { es: '3c. Las frases exclamativas', ko: '3c. 감탄문', en: '3c. Exclamations' },
+          head: ['Estructura', 'Ejemplo'],
+          rows: [ ['¡Qué (+ adjetivo) + sustantivo!', '¡Qué (mala) suerte!'], ['¡Qué + adjetivo (+ verbo)!', '¡Qué bonito (es)!'], ['¡Qué + sustantivo (+ verbo)!', '¡Qué calor (tengo)!'], ['¡Qué + adverbio (+ verbo)!', '¡Qué bien (trabaja)!'] ] },
+        { type: 'table', title: { es: '3d. El verbo DOLER', ko: '3d. DOLER 동사', en: '3d. The verb DOLER' },
+          head: ['', 'DOLER', ''],
+          rows: [ ['Me / Te / Le', 'DUELE', '+ sustantivo singular'], ['Nos / Os / Les', 'DUELEN', '+ sustantivo plural'] ],
+          note: { ko: '예: Me duele la cabeza. / Les duelen los pies.', en: 'E.g. Me duele la cabeza. / Les duelen los pies.' } }
+      ] }
+  ]
+});
